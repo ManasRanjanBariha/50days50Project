@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <link  rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="panel active" style=" background: url(./assets/image1.jpg)"></div>
+        <div class="panel" style=" background: url(./assets/image2.jpg)"></div>
+        <div class="panel" style=" background: url(./assets/image3.jpg)"></div>
+        <div class="panel" style=" background: url(./assets/image4.jpg)"></div>
+        <div class="panel" style=" background: url(./assets/image5.jpg)"></div>
+    </div>
+    <script>
+        const panels=document.querySelectorAll('.panel')
+
+        panels.forEach(panel => {
+            panel.addEventListener('click',()=>{
+                panels.forEach(p => p.classList.remove('active'));
+                panel.classList.add('active');
+            })
+            
+        })
+    </script>
+</body>
+</html>

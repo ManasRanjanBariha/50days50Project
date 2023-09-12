@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    /* width: 90%; */
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    /* gap: 2px; */
+}
+.panel{
+    /* position: relative; */
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    margin: 2px;
+    border-radius: 40px;
+    height: 90%;
+    flex: 1;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    
+    /* transition: transform cubic-bezier(1, 0, 0, 1) ease; */
+    cursor: pointer;
+}
+
+.active{
+    flex: 5;
+    /* animation: expandFromLeft 0.5s ease-in-out; */
+    /* transform: scale(1.2); */
+}
+
+@keyframes expandFromLeft {
+    0% {
+        transform: scaleX(0); /* Start with no width (scaled to 0) */
+        transform-origin: left center; /* Expand from the left */
+    }
+    100% {
+        transform: scaleX(1); /* End with full width (scaled to 1) */
+        transform-origin: left center; /* Expand from the left */
+    }
+}
